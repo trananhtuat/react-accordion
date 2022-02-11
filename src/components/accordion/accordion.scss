@@ -1,0 +1,40 @@
+.accordion {
+    background-color: #085391;
+
+    &__title {
+        padding: 1rem 0.5rem;
+        font-weight: 600;
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        i {
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    &.active &__icon {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        padding: 0 0.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s ease-in-out;
+        background-color: #fff;
+    }
+
+    &.active &__content {
+        padding: 1.5rem 0.5rem;
+        max-height: 9em;
+    }
+}
